@@ -1,0 +1,134 @@
+//login page
+.page-user, .page-user-register, .page-user-password {
+    main {
+        form#user-login, form#user-register-form, form#user-pass {
+            min-height: $m-phone;
+            background-color: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            @media (min-width: $desktop) {
+                min-height: calc(100vh - 200px);
+            }
+            > div {
+                width: calc(100% - 30px);
+                @media (min-width: $desktop) and (orientation: landscape) {
+                    width: calc(100% - 30px);
+                    max-width: $desktop;
+                }
+                h1 {
+                    color: $dk-gray;
+                }
+                a {
+                    width: auto;
+                    padding: 5px 10px;
+                    text-align: center;
+                    @media (min-width: $tablet) {
+                        width: auto;
+                    }
+                    margin: 5px;
+                    &:hover {
+                        background-color: $primary;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+                .form-submit {
+                    @include button__primary;
+                    transition: all 200ms;
+                    &:hover {
+                        background-color: #fff;
+                        color: $primary;
+                    }
+                }
+                input[type="text"], input[type="password"], input[type="email"],
+                input:-webkit-autofill {
+                    width: 100%;
+                    display: block;
+                    padding: 10px 5px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    border-radius: 0;
+                    border-style: solid;
+                    border-width: 0;
+                    border-color: #cccccc;
+                    box-shadow: none;
+                    font-size: 14px;
+                    background-color: #fff;
+                    appearance: none !important;
+                    border: 1px solid $primary;
+                }
+
+                input:-webkit-autofill {
+                    -webkit-box-shadow: 0 0 0px 1000px white inset;
+                }
+                label {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    padding: 5px 0px;
+                }
+                .description {
+                    color: $primary;
+                    font-size: 10px;
+                    padding: 5px 0px;
+                    letter-spacing: 1px;
+                }
+                h1 {
+                    margin-top: 0;
+                }
+                .back-to-login {
+                    margin-bottom: 10px;
+                    .login-account {
+                        @include button__primary;
+                        margin: 0px;
+                        transition: all 200ms;
+                        &:hover {
+                            background-color: #fff;
+                            color: $primary;
+                        }
+                    }
+                }
+                #user_login_form {
+                    @media (min-width: $desktop) {
+                        width: 50%;
+                        float: left;
+                        padding-right: 20%;
+                        border-right: 1px solid $primary;
+                    }
+                    .login-password {
+                        @include button__primary;
+                        margin: 0px;
+                        transition: all 200ms;
+                        &:hover {
+                            background-color: #fff;
+                            color: $primary;
+                        }
+                    }
+                }
+                .create-account {
+                    @media (min-width: $desktop) {
+                        width: 50%;
+                        float: left;
+                        padding: 0px 15px;
+                    }
+                    h2 {
+                        color: $dk-gray;
+                    }
+                    a {
+                        @include button__primary;
+                        transition: all 200ms;
+                        &:hover {
+                            background-color: #fff;
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-user-register form#user-register-form > div .form-submit {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,21 @@
+.node-type-brand-pages{
+	.product-category__card{
+		&:hover{
+			.product-category__card-title{
+				color: $primary;
+			}
+
+			.product-category__card-description{
+				color: $primary;
+			}
+		}
+	}
+
+	section#view-more{
+		.button__plain{
+			width: 100%;
+			display: block;
+			text-align: center;
+		}
+	}
+}

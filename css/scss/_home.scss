@@ -1,0 +1,36 @@
+#home{
+	main{
+		margin-bottom: 0px;
+	}
+
+	.panel{
+		.button__plain{
+			width: 230px;
+			color: #fff;
+			border: 1px solid #fff;
+			text-align: center;
+			display: inline-block;
+			background-color: rgba(0,0,0,0.3);
+			transition: all 200ms;
+
+			@media (min-width: $lg-phone){
+				width: 310px;
+				background-color: rgba(0,0,0,0.3);
+				padding: 15px 25px;
+				font-size: 18px;
+			}
+
+			&:hover{
+				background-color: rgba(0,0,0,0.6);
+			}
+		}
+
+		.panel__content-box-body{
+			width: 100%;
+    		position: absolute;
+    		bottom: 15px;
+    		left: 15px;
+    		display: block;
+		}
+	}
+}

@@ -1,0 +1,117 @@
+.page-user {
+    .user__controls {
+        margin-bottom: 45px !important;
+    }
+    .title__plain--plain-heavy {
+        border-bottom: 2px solid $lt-gray;
+        margin-bottom: 10px;
+    }
+    section {
+        margin: 0px;
+        p {
+            padding: 5px;
+            line-height: 14px;
+        }
+        input[type="submit"], .edit {
+            @include button__primary;
+        }
+        .country {
+            display: block;
+        }
+        table {
+            width: 100%;
+            float: left;
+            padding: 5px;
+            tr {
+                background-color: #fff;
+                th, td {
+                    padding: 18px 10px;
+                    background-color: transparent;
+                }
+            }
+            tr.even {
+                background-color: lighten($primary, 30%);
+            }
+            thead {
+                tr {
+                    background-color: $primary;
+                    th {
+                        color: #fff;
+                        text-transform: uppercase;
+                        a {
+                            color: #fff;
+                        }
+                        img {
+                            width: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section#profile {
+        #acount-Information {
+            width: 100%;
+            float: left;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            #customer-profile, #shipping-address, #billing-address {
+                width: 100%;
+                min-height: 160px;
+                padding-bottom: 60px;
+                float: left;
+                @media (min-width: $tablet) {
+                    width: calc(100% /3);
+                }
+                .edit {
+                    @include button__primary;
+                    position: absolute;
+                    bottom: -7.5px;
+                    left: 0px;
+                }
+
+                h6{
+                    padding-left: 0px;
+                    font-weight: bold;
+                }
+                p {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    section#recent-orders {
+        margin-bottom: 15px;
+    }
+    section#user-logout {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        z-index: 99;
+        a {
+            @include button_cancel;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.page-user-addressbook{
+    #commerce-addressbook-shipping-default{
+
+    }
+
+    #commerce-addressbook-shipping-list{
+        @include full_height;
+        
+        td:nth-of-type(1){
+            padding-left: 0px;
+        }
+        td{
+            text-align: left;
+        }
+    }
+}
+
+

@@ -1,0 +1,54 @@
+form{
+	*{
+		transition: none;
+	}
+	label, .description, legend{
+		margin-bottom: 10px;
+		font-weight: 700;
+		font-size: 10px;
+		color: $dk-gray;
+	}
+
+	.fieldset-legend {
+		@include title__plain;
+	}
+
+	legend{
+		margin-bottom: 0px;
+	}
+
+	.description{
+		margin-top: 10px;
+		color: $dk-gray;
+	}
+
+	input::placeholder{
+		color: $gray;
+	}
+
+	input[type="submit"], button, select{
+		padding: 10px 25px;
+	}
+
+	input[type="text"], input[type="password"], input[type="tel"], 
+	input[type="number"], input[type="email"], fieldset{
+		width: 100%;
+		padding: 10px 25px;
+	}
+
+	.form-item{
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+
+		.form-item{
+			width: 100%;
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	}
+
+	.button-operator{
+		padding: 10px;
+	}
+}

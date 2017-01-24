@@ -1,0 +1,263 @@
+//main demo page
+.page-demo-snowboards, .page-demo-bindings,
+.node-type-product-demo {
+    #back-to-top {
+        display: block !important;
+    }
+
+    .sale-card {
+        opacity: 0.1;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .active {
+        opacity: 1;
+    }
+}
+
+.page-demo-snowboards-and-bindings, .page-demo-snowboards, .page-demo-bindings {
+    #back-to-top {
+        display: block !important;
+    }
+
+    main {
+        .region-content {
+            padding: 15px 15px 0px;
+        }
+    }
+
+    .sale-card__image {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $black;
+
+        svg {
+            width: 50%;
+        }
+    }
+
+    .sale-card__text {
+        text-align: center;
+    }
+
+    .product-category__card-title--demo {
+        padding-bottom: 0px;
+        min-height: 0px;
+    }
+
+    .product-category__card-title--black {
+        padding-top: 0px;
+        min-height: 0px;
+    }
+
+    .product-category__card-msrp-price {
+        width: 100%;
+        display: inline-block;
+        background-color: #fff;
+        padding: 5px;
+
+        .product-category__card-msrp, .product-category__card-price {
+            display: inline-block;
+        }
+
+        .product-category__card-msrp {
+            text-decoration: line-through;
+            margin-right: 15px;
+        }
+    }
+
+    section#demo-intro, section#demo-links, section#staff-selected {
+        padding: 15px 0px;
+
+        p {
+            max-width: $final / 2 - 30px;
+            padding: 15px 5px;
+        }
+    }
+
+    section#view-all {
+        .view-content {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            .product-category__card {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .product-category__card-title--black {
+                    border: none;
+                    padding-bottom: 0px;
+
+                    &::after {
+                        content: none;
+                    }
+                }
+
+                .product-category__card-sku {
+                    width: 100%;
+                    padding: 0px 5px 5px;
+                    font-size: 8px;
+                    background-color: #fff;
+
+                    &::after {
+                        content: "";
+                        width: calc(100% - 10px);
+                        height: 1px;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 5px;
+                        background-color: #C3C3C4;
+                    }
+                }
+            }
+        }
+
+        .button__plain {
+            width: calc(50% - 5px);
+            float: left;
+            margin: 10px 0px;
+            text-align: center;
+        }
+
+        #demo-bindings-btn {
+            float: right;
+        }
+    }
+}
+
+//demo page inner
+.node-type-product-demo {
+    main {
+        margin-bottom: 0px;
+    }
+
+    .region-content {
+        padding-bottom: 0px;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        width: calc(100% / 8);
+        height: calc(100% - 5px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        background-color: #fff;
+        opacity: 0.1;
+
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        svg {
+            width: 50%;
+        }
+    }
+
+    .swiper-button-prev {
+        left: 0px;
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    .swiper-button-next {
+        right: 0px;
+    }
+
+    .product-condition__label {
+        position: absolute;
+        top: -10px;
+        left: 5px;
+        font-weight: 900;
+    }
+
+    .product-buy-options__condition {
+        width: 100%;
+        max-width: 568px;
+        height: 40px;
+        margin: 15px 0px 15px;
+        padding: 5px;
+
+        @include full_height;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        .commerce-product-field, .field-items {
+            width: 100%;
+            height: 8px;
+        }
+    }
+
+    .product-buy-options__condition-gauge {
+        width: 100%;
+        height: 10px;
+        border-radius: 25px;
+        border: 1px solid $primary;
+    }
+
+    .product-buy-options__guauge-track {
+        width: 2%;
+        height: 8px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 25px;
+        transition: all 1s 500ms;
+        background-color: $primary;
+        background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+        background-size: 40px 40px;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+
+        &::after {
+            content: '';
+            width: 5px;
+            height: 20px;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 25px;
+            background-color: $primary;
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+            background-size: 40px 40px;
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    #thrashed, #perfect {
+        position: absolute;
+        bottom: -10px;
+    }
+
+    #thrashed {
+        left: 5px;
+    }
+
+    #perfect {
+        right: 0px;
+    }
+
+    .product-buy-options__value, .product-buy-options__value--strike-through {
+        font-weight: 900;
+    }
+
+    #related-products {
+        min-height: 120px;
+        margin: 0px;
+        padding: 0px;
+    }
+}

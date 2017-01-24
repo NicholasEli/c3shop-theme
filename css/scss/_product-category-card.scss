@@ -1,0 +1,109 @@
+//extends classes page
+.product-category__card {
+    width: 50%;
+    float: left;
+    padding: 5px;
+
+    &--extra-small {
+        @media (min-width: $tablet) {
+            width: calc(100% / 4);
+        }
+        @media (min-width: $desktop) {
+            width: calc(100% / 8);
+        }
+    }
+    &--small {
+        @media (min-width: $tablet) {
+            width: calc(100% / 3);
+        }
+        @media (min-width: $desktop) {
+            width: calc(100% / 6);
+        }
+    }
+    &--medium{
+        @media (min-width: $desktop) {
+            width: calc(100% / 4);
+        }   
+    }
+    &--large {
+        @media (min-width: $tablet) {
+            width: calc(100% / 3);
+        }
+        @media (min-width: $final) {
+            width: calc(100% / 6);
+        }
+    }
+
+    &--catagorey{
+        @media (min-width: $tablet) {
+            width: calc(100% / 3);
+        }
+        @media (min-width: $final) {
+            width: calc(100% / 5);
+        }
+    }
+}
+
+.product-category__card-image {
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+
+    img{
+        float: left;
+    }
+}
+
+.product-category__card-title {
+    width: 100%;
+    float: left;
+    padding: 5px;
+    margin: 0px;
+    font-weight: 900;
+    text-transform: capitalize;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-end;
+    min-height: 46px;
+
+    &::after{
+    	content: "";
+    	width: calc(100% - 10px);
+    	height: 1px;
+    	position: absolute;
+    	bottom: 0px;
+    	left: 5px;
+		background-color: $gray;
+    }
+
+    &--black{
+        color: $black;
+    }
+
+    &--gray{
+        color: $gray;
+    }
+
+    &--demo{
+        color: $primary;
+        &::after{
+            content: none;
+        }
+
+    }
+}
+
+.product-category__card-description {
+    width: 100%;
+    float: left;
+    padding: 5px;
+    background-color: #fff;
+
+    &--black{
+        color: $black;
+    }
+}
+

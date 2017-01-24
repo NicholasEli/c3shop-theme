@@ -1,0 +1,26 @@
+name = PAIRODIME TESTc3 Shop 16/17
+description = Nice description here - developed by Pairodime Productions. <a href="http://www.pairodime.com">pairodime.com</a>
+core = 7.x
+
+regions[user_messages] 		= User Messages
+regions[content] 			= Content
+regions[capita_menu_links] 	= Capita Menu Links
+regions[coal_menu_links] 	= Coal Menu Links
+regions[union_menu_links] 	= Union Menu Links
+regions[shipping_intro] 	= Shipping Intro
+regions[shipping_contact] 	= Shipping Contact
+regions[shipping_info] 		= Shipping Info
+regions[shipping_policy] 	= Shipping Policy
+regions[shipping_terms] 	= Shipping Terms
+regions[footer_menu_links] 	= Footer Menu Links
+
+stylesheets[all][] = lib/fastclick/fastclick.js
+stylesheets[all][] = lib/Swiper/css/swiper.min.css
+stylesheets[all][] = css/style.css
+
+scripts[] = lib/Swiper/dist/js/swiper.min.js
+scripts[] = lib/isotope/isotope.js
+scripts[] = lib/progressbar/dist/progressbar.min.js
+scripts[] = lib/charts/Chart.min.js
+scripts[] = js/script.js
+

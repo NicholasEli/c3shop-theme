@@ -1,0 +1,78 @@
+table.checkout-review .pane-data-full{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+table{
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+
+    *{
+        transition: none;
+    }
+
+    thead{
+        tr{
+            th{
+                font-weight: 900;
+                padding: 10px;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            th:first-of-type{
+                text-align: left;
+            }
+
+            th:last-of-type{
+                text-align: right;
+            }
+        }
+    }
+
+    tbody{
+        tr{
+            td{
+                padding: 18px 10px;
+                text-align: center;
+                vertical-align: middle;
+                input[type="submit"]{
+                    @include button_gray;
+                    border-radius: 6px;
+                    padding: 10px 25px !important;
+                }
+
+                input[type="text"], input[type="number"]{
+                    padding: 10px;
+
+                }
+                a.button {
+                    @include button__primary;
+                }
+                img {
+                    width: auto;
+                }
+            }
+
+            td:first-of-type{
+                text-align: left;
+            }
+
+            td:last-of-type{
+                text-align: right;
+            }
+        }
+
+        .pane-title{
+            td{
+                text-align: center;
+            }
+        }
+
+        .pane-data{
+            .form-item{
+                text-align: center;
+            }
+        }
+    }
+}

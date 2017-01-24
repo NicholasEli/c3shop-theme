@@ -1,0 +1,234 @@
+header {
+    background-color: $dk-blue;
+
+    div.container {
+        padding-top: 0px;
+        padding-bottom: 0px;
+
+        section.header__tier {
+            //top
+            div#header-logo {
+                width: 60px;
+                float: left;
+
+                img, svg {
+                    width: auto;
+                    max-width: none;
+                    height: 60px;
+                    float: left;
+                    padding: 10px 0px;
+
+                    * {
+                        fill: #fff !important;
+                    }
+                }
+            }
+
+            div#header-search-account-cart {
+                width: calc(100% - 60px);
+                float: left;
+
+                .header__button {
+                    float: right;
+                    margin: 0px;
+                    padding: 10px 10px;
+                    text-align: center;
+
+                    @media (min-width: $m-phone) {
+                        padding: 10px 15px;
+                    }
+
+                    .cart__status {
+                        width: 12px;
+                        height: 12px;
+                        position: absolute;
+                        top: 10px;
+                        right: 14px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $primary;
+                        border-radius: 100%;
+                        color: #fff;
+                        font-size: 6px;
+                        line-height: 6px;
+                        z-index: 2;
+
+                        .cart__status-item {
+                            color: #fff;
+                        }
+                    }
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .header__button-label {
+                        color: #fff;
+                        display: block;
+                    }
+
+                    &:hover {
+                        background-color: $blue;
+                        cursor: pointer;
+
+                        svg {
+                            fill: $primary !important;
+
+                            * {
+                                fill: $primary !important;
+                            }
+                        }
+
+                        .header__button-label {
+                            color: $primary;
+                        }
+                    }
+                }
+
+                .header__button--active {
+                    background-color: $blue;
+                    color: $primary;
+
+                    svg {
+                        fill: $primary !important;
+
+                        * {
+                            fill: $primary !important;
+                        }
+                    }
+
+                    .header__button-label {
+                        color: $primary;
+                    }
+                }
+            }
+
+            //middle - bottom
+            nav {
+                ul {
+                    li {
+                        display: inline;
+
+                        a {
+                            display: inline-block;
+                            margin: 0px;
+                            font-size: 10px;
+
+                            @media (min-width: $m-phone) {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        section#header-top {
+            border-bottom: 1px solid $gray;
+        }
+
+        section#header-bottom {
+            .header__navigation-bar {
+                overflow-x: scroll;
+                white-space: nowrap;
+
+                @media (min-width: $desktop){
+                    overflow-x: hidden;
+                }
+
+                ul {
+                    width: 100%;
+
+                    svg {
+                        width: 70px;
+                        max-height: 35px;
+
+                        vertical-align: middle;
+
+                        * {
+                            fill: #fff !important;
+                        }
+                    }
+
+                    #svg-capita {
+                        width: 80px;
+                    }
+
+                    li:first-of-type {
+                        a {
+                            &:after {
+                                content: "";
+                                width: 1px;
+                                height: calc(100% - 15px);
+                                position: absolute;
+                                right: 0px;
+                                top: 50%;
+                                background-color: $gray;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .header__navigation-bar, .sub-menu {
+                max-height: 0px;
+                transition: all 200ms 300ms;
+                overflow-y: hidden;
+            }
+
+            .header__navigation-bar {
+                width: 100%;
+                float: left;
+                display: flex;
+            }
+
+            .header__navigation-bar::-webkit-scrollbar-track {
+                background-color: transparent;
+                display: none;
+            }
+
+            .header__navigation-bar::-webkit-scrollbar {
+                background-color: transparent;
+                display: none;
+            }
+
+            .header__navigation-bar::-webkit-scrollbar-thumb {
+                background-color: transparent;
+                display: none;
+            }
+
+            .header__navigation-bar::-webkit-scrollbar-button {
+                background-color: transparent;
+                display: none;
+            }
+
+            .header__navigation-bar::-webkit-scrollbar-corner {
+                background-color: transparent;
+                display: none;
+            }
+
+            .header__navigation-bar::-webkit-resizer {
+                background-color: transparent;
+                display: none;
+            }
+
+            .header__navigation-bar--active, .sub-menu--active {
+                border-top: 1px solid $gray;
+                max-height: 100px;
+            }
+
+            .sub-menu {
+                li:first-of-type {
+                    a {
+                        &:after {
+                            content: none !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+h1, h2, h3,
+h4, h5, h6,
+p, li, a,
+th, td, address,
+span, div {
+    font-family: Verdana,Geneva,sans-serif;
+    * {
+        font-family: Verdana,Geneva,sans-serif;
+    }
+}
+
+h1, h2, h3,
+h4, h5, h6,
+p, li, th, 
+td, address, span{
+    transition: none;
+}
+
+div.error, table tr.error {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    background-image: url("../images/error.png");
+    background-size: 24px 24px;
+}
+
+.object {
+    width: auto;
+    max-width: none;
+    height: 125%;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+*::selection {
+    color: #fff;
+    background-color: $primary;
+}
+
+//krumo
+.krumo-root {
+    width: 100%;
+    float: left;
+    z-index: 999;
+    img {
+        width: auto;
+    }
+}
+
+//admin bar
+#admin-menu {
+    display: none;
+}
+
+body.admin-menu {
+    margin-top: 0px !important;
+}
+
+//block__element--modifier
+html {
+    @include full_height;
+    background-color: #DFDFDF;
+    body {
+        @include full_height;
+        overflow-x: hidden;
+        header, main, footer {
+            @include full_height;
+            section {
+                @include full_height;
+            }
+        }
+        //olark
+        #habla_window_div #habla_topbar_div {
+            background-color: $primary !important;
+        }
+        header {}
+        main {
+            min-height: calc(100vh - 105px);
+            margin-bottom: 45px;
+            overflow-x: hidden;
+            @media (min-width: $tablet) {
+                min-height: calc(100vh - 300px);
+            }
+            .region-content {
+                @include container;
+            }
+        }
+        footer {
+            @include full_height;
+        }
+    }
+    .fixed-cart {
+        @media (min-width: $desktop) {
+            transition: all 200ms 300ms;
+        }
+    }
+    .tierOne {
+        .fixed-cart {
+            margin-top: 40px;
+        }
+    }
+    .tierTwo {
+        .fixed-cart {
+            margin-top: 80px;
+        }
+    }
+    .searchTier {
+        .fixed-cart {
+            margin-top: 70px;
+        }
+    }
+}
+
+.page-home, .page-proform, .node-type-brand-pages {
+    .region-content {
+        max-width: none;
+        padding: 0px;
+    }
+}
+
+// Drupal Views
+
+.view {
+    .item-list {
+        display: block;
+        clear: both;
+    }
+}

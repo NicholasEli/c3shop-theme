@@ -1,0 +1,14 @@
+#jGrowl{
+	.jGrowl-notification{
+		background-color: $primary;
+		opacity: 1;
+	}
+}
+
+.no-jgrowl{
+	#jGrowl{
+		display: none !important;
+		opacity: 0 !important;
+		left: -200% !important;
+	}
+}

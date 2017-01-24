@@ -1,0 +1,116 @@
+.field-name-commerce-order-total .commerce-price-formatted-components {
+  width: 33%;
+  margin-left: auto;
+}
+
+.field-name-commerce-order-total .commerce-price-formatted-components tr.component-type-commerce-price-formatted-amount {
+  font-weight: bold;
+}
+
+.products ul{
+  display:none;
+}
+
+tr.odd {
+  background: none repeat scroll 0 0 #FFFFFF;
+}
+
+tr.even {
+  background: none repeat scroll 0 0 #EFEFEF;
+}
+
+.component-title {
+  font-size: 11px;
+    font-weight: bold;
+}
+
+table {
+  width:100%;
+  border-spacing: 0;
+  font-size: 11px;
+}
+
+table.details td {
+  padding: 0 5px;
+}
+
+table th {
+  background: none repeat scroll 0 0 #8E979D;
+    border: 0 none;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+table th,
+.products table td {
+  padding: 4px 5px;
+}
+
+.views-field-commerce-total,
+.component-total {
+  width: 100px!important;
+  text-align: right;
+}
+
+.line-items {
+  border-bottom: 1px dotted #8E979D;
+}
+
+.products table.commerce-price-formatted-components {
+  width: 200px;
+  padding-top: 20px;
+  float: right;
+}
+
+.line-items  th.views-field-nothing {
+	width:60%;
+}
+
+.line-items  th.views-field-nothing-1 {
+	width:5%;
+}
+
+.line-items  th.views-field-commerce-total {
+	width:20%;
+}
+
+.field-name-field-product-size {
+	float: left;
+    margin-right: 20px;
+    margin-top: 45px;
+}
+
+.field-name-field-color-swatch {
+	margin-right: 40px;
+	float: left;
+}
+
+.line-item-title {
+	float: left;
+    width: 40%;
+	margin-top: 45px;
+}
+
+.commerce-product-attributes-wrapper {
+  float: left;
+    width: 24%;
+}
+
+.commerce-product-attributes-wrapper .field-type-taxonomy-term-reference{
+  padding-left: 20px;
+}
+
+.commerce-product-attributes-wrapper .field-type-taxonomy-term-reference .field-label, .commerce-product-attributes-wrapper .field-type-taxonomy-term-reference .field-item{
+  width: auto;
+  float: left;
+}
+
+.product-sku {
+	float: left;
+	margin-top: 45px;
+}
+
+.view-id-commerce_line_item_table td { vertical-align:middle;}

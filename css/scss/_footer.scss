@@ -1,0 +1,95 @@
+footer {
+    background-color: $lt-gray;
+    #back-to-top {
+        display: none;
+        width: 50px;
+        height: 40px;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: $lt-gray;
+        color: $black;
+        padding: 5px;
+        z-index: 2;
+        &:hover {
+            color: #000;
+        }
+        svg {
+            width: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    section#footer-links {
+        div.container {
+            nav {
+                ul {
+                    margin-left: -10px;
+                    li {
+                        display: inline;
+                        margin-right: 5px;
+                        .link__plain--dark-gray {
+                            display: inline-block;
+                            padding-bottom: 5px;
+                            &::after {
+                                content: "";
+                                width: calc(100% - 20px);
+                                height: 2px;
+                                background-color: $gray;
+                                position: absolute;
+                                bottom: 0px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                            &:hover {
+                                i {
+                                    color: $secondary;
+                                    transform: translateY(2.5px);
+                                }
+                                &::after {
+                                    background-color: $secondary;
+                                }
+                            }
+                            i {
+                                margin-left: 5px;
+                            }
+                        }
+                        .link__plain--dark-gray-active {
+                            i {
+                                color: $secondary;
+                                transform: translateY(2.5px);
+                            }
+                            &::after {
+                                background-color: $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section#footer-copyright {
+        div.container {
+            p {
+                color: $gray;
+                margin-bottom: 10px;
+            }
+            a {
+                color: $gray;
+                text-decoration: underline;
+                &:hover {
+                    color: $secondary;
+                }
+            }
+        }
+    }
+    section#footer-logo {
+        div.container {
+            svg {
+                width: 50px;
+            }
+        }
+    }
+}

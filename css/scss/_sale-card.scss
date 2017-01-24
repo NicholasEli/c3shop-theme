@@ -1,0 +1,50 @@
+.sale-card{
+	width: 100%;
+	padding: 5px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	@include full_height;
+	@media (min-width: $tablet){
+		width: 50%;
+		float: left;
+	}
+
+	&:hover{
+		.sale-card__text{
+			color: $primary;
+		}
+
+	}
+}
+.sale-card__image{
+	width: 100%; 
+	@include full_height;
+
+	@media (min-width: $tablet){
+		width: 50%;
+	}
+
+	img{
+		height: 100%;
+	}
+}
+.sale-card__text{
+	width: 100%;
+	float: left;
+	background-color: #696875;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: underline;
+	color: #fff;
+
+	@media (min-width: $tablet){
+		width: 50%;
+	}
+
+	@media (min-width: $desktop){
+		font-size: 18px;
+		line-height: 20px;
+	}
+}

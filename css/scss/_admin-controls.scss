@@ -1,0 +1,190 @@
+.admin__controls {
+	margin-bottom: 45px !important;
+    .title__plain--plain-heavy {
+        border-bottom: 2px solid $lt-gray;
+        margin-bottom: 10px;
+    }
+    .admin__links-wrapper {
+        padding: 15px 0px;
+        @include full_height;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (min-width: $tablet) {
+            justify-content: space-between;
+        }
+    }
+    .admin__link--round {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border-radius: 100%;
+        background-color: $gray;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @media (min-width: $tablet) {
+            width: 150px;
+            height: 150px;
+        }
+        @media (min-width: $final) {
+            width: 200px;
+            height: 200px;
+        }
+        &:hover {
+            background-color: $primary;
+        }
+    }
+    .customer__support-box-wrapper {
+        @include full_height;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        h6 {
+            font-size: 16px;
+            border: none;
+            padding: 0;
+        }
+    }
+    .customer__support-box {
+        width: 100%;
+        @include full_height;
+        padding: 10px;
+        @media (min-width: $lg-phone) {
+            width: 50%;
+            float: left;
+        }
+        @media (min-width: $tablet) {
+            width: calc(100% / 3);
+        }
+    }
+    .customer__support-box:nth-of-type(even) {
+        @media (min-width: $tablet) {
+            border-left: 1px solid $lt-gray;
+        }
+        @media (min-width: $tablet) {
+            border-right: 1px solid $lt-gray;
+        }
+    }
+
+    // Search Customers
+    #search-customers, #search-orders {
+
+        #edit-name-wrapper {
+            width: calc(100% - 100px);
+        }
+        .views-exposed-widget {
+            //width: 100px;
+            padding: 0px;
+            margin: 0px;
+        }
+        .views-exposed-form .views-exposed-widget .form-submit {
+            margin: 0px 0px 0px 10px;
+        }
+        #edit-submit-commerce-customer-profiles {
+            float: right;
+        }
+        #edit-reset, label {
+            display: none;
+        }
+    }
+
+    &#products {
+        // The Filter
+        #edit-combine-wrapper {
+            .views-operator {
+                display: inline-block;
+            }
+            .views-widget {
+                display: inline-block;
+            }
+        }
+        
+        .form-submit {
+            margin-top: 2.4em;
+        }
+    }
+}
+
+#chat-status, #open-chat{
+	width: 100%;
+	float: left;
+	margin: 15px 15px 15px 0px;
+	span{
+		box-shadow: none;
+	}
+	a{
+		margin-top: 15px;
+	}
+}
+
+#orders{
+    .views-exposed-widgets {
+    	padding: 10px 0px;
+    	display: flex;
+    	flex-wrap: wrap;
+    	flex-direction: row;
+    	justify-content: flex-start;
+        > div {
+            padding: 0px;
+            margin: 0px 10px 0px 0px;
+        }
+        select {
+            height: 35px;
+        }
+
+        // Status Filter
+        #edit-status-wrapper {
+            #edit-status {
+                height: 200px;
+                max-height: 200px;
+            }
+        }
+
+
+        .form-item{
+        	margin: 0px;
+        }
+
+        #edit-date-filter-min-wrapper, #edit-date-filter-max-wrapper{
+			float: left;
+        }
+
+        #edit-submit-commerce-backoffice-orders{
+        	display: block;
+        	margin: 0px;
+        }
+
+        .views-widget-filter-combine {
+                padding: 0;
+                position: relative;
+        }
+
+        .description{
+        	color: $gray;
+        }
+
+        .views-submit-button {
+            input[type="submit"], .edit {
+                @include button__primary;
+            }
+        }
+    }
+
+	fieldset{
+		padding: 0px;
+	}
+    #edit-operation{
+    	@include button_gray;
+    }
+}
+
+
+
+
+
+
+
